@@ -1,8 +1,10 @@
 name: Deploy to GitHub Pages
 
+
 on:
   push:
     branches: 'master'
+
 
 jobs:
   build_site:
@@ -32,7 +34,7 @@ jobs:
 
       - name: build
         env:
-          BASE_PATH: '/svelte'
+          BASE_PATH: '/your-repo-name'
         run: |
           npm run build
           touch build/.nojekyll
