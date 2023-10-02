@@ -32,7 +32,7 @@ jobs:
 
       - name: build
         env:
-          BASE_PATH: 'https://github.com/pytoncraft2/svelte'
+          BASE_PATH: '/svelte'
         run: |
           npm run build
           touch build/.nojekyll
