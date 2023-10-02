@@ -1,0 +1,120 @@
+{
+  "evenement": {
+    "titre": "Titre de l'événement",
+    "lieu": {
+      "depart": "Lieu de départ",
+      "destination": "Lieu de destination"
+    },
+    "date": "Date de l'événement",
+    "description": "Description de l'événement",
+    "organisateur": {
+      "nom": "Nom de l'organisateur",
+      "email": "max@gmail.com"
+    }
+  },
+  "participants": [
+    {
+      "name": "George Legrand",
+      "email": "jean@gmail.com"
+    },
+    {
+      "name": "Marcel Duchamp",
+      "email": "albert@gmail.com"
+    },
+    {
+      "name": "Judas Bricot",
+      "email": "judas@gmail.com"
+    }
+  ],
+  "voitureAller": [
+    {
+      "carType": "Type de voiture (aller)",
+      "placesDisponibles": 4,
+      "conducteur": {
+        "name": "Nom du conducteur ONE (aller)",
+        "email": "zeus@gmail.com"
+      },
+      "passagers": [
+        {
+          "name": "Sauron Lanneau",
+          "email": "sauron@gmail.com"
+        },
+        {
+          "name": "Suzan Hash",
+          "email": "suzan@gmail.com"
+        }
+      ]
+    },
+    {
+      "carType": "Type de voiture 2 (aller)",
+      "placesDisponibles": 2,
+      "conducteur": {
+        "name": "Ribambole de Thorus",
+        "email": "thor@gmail.com"
+      },
+      "passagers": [
+        {
+          "name": "Avadacedavra",
+          "email": "tue@gmail.com"
+        },
+        {
+          "name": "Email Jean Sais Rien",
+          "email": "email@gmail.com"
+        }
+      ]
+    }
+  ],
+  "voitureRetour": [
+    {
+      "carType": "Type de voiture (retour)",
+      "placesDisponibles": 3,
+      "conducteur": {
+        "name": "Jamie",
+        "email": "ooo@gmail.com"
+      },
+      "passagers": [
+        {
+          "name": "ZZ MM OO",
+          "email": "zz@gmail.com"
+        },
+        {
+          "name": "Roooo Hadibou",
+          "email": "dd@gmail.com"
+        },
+        {
+          "name": "Champignon Mario",
+          "email": "champ@gmail.com"
+        }
+      ]
+    },
+    {
+      "carType": "Type de voiture 3 (retour)",
+      "placesDisponibles": 3,
+      "conducteur": {
+        "name": "Orange SFR",
+        "email": "morange@gmail.com"
+      },
+      "passagers": [
+        {
+          "name": "Modo LTS",
+          "email": "modo@gmail.com"
+        },
+        {
+          "name": "Marcel Julien",
+          "email": "io@gmail.com"
+        }
+      ]
+    }
+  ],
+  "travelOptions": {
+    "roundTrip": true,
+    "oneWay": {
+      "departureDate": "Date de départ (aller)",
+      "departureTime": "Heure de départ (aller)"
+    },
+    "returnTrip": {
+      "returnDate": "Date de retour (retour)",
+      "returnTime": "Heure de retour (retour)"
+    }
+  }
+}

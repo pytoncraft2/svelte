@@ -1,0 +1,15 @@
+{
+    "titreEvenement": "Suberbe evenement",
+    "lieu_evenement": "Mon lieu",
+    "lieu_evenement_info": "lieu plus d'info",
+    "lieu_depart_retour": "lieu de départ et retour",
+    "lieu_depart_retour_info": "lieu encore plus d'info",
+    "trajets": "aller_retour",
+    "description": "Ma superbe description",
+    "avatar": {},
+    "listePersonnePresente": [
+        "Jean",
+        "Albert",
+        "Aude"
+    ]
+}

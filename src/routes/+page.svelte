@@ -1,2 +1,8 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+let value = '';
+</script>
+
+<a href="/creation">Créer</a>
+
+<input type="text" bind:value />
+<p>{value}</p>
