@@ -1,6 +1,6 @@
 <script>
     import Input from "../../lib/input/Input.svelte";
-    import generateString from '../../lib/utils'
+    import generateString, { GET, POST } from '../../lib/utils'
     let listePersonnes = [];
     let nomPersonne = "";
     let evenementCree = false;
@@ -31,24 +31,23 @@
             const [key, value] = field;
             data[key] = value;
         }
-        data["listePersonnePresente"] = listePersonnes;
-        console.log(data);
-        evenementCree = true;
+
+        POST('evenement', data).then(v => console.log("V", v))
     }
 </script>
 
 {#if !evenementCree}
 <form on:submit|preventDefault={onSubmit}>
-    <input placeholder="Titre de l'évenement" name="titreEvenement" />
+    <input placeholder="Titre de l'évenement" name="titre" />
 
     <h4>Lieu de l'évenement</h4>
     <input
         placeholder="Commune/CP ou adresse précise pour géolocalisation - saisir puis sélectionner dans la liste déroulante"
-        name="lieu_evenement"
+        name="lieu_depart"
     />
     <input
         placeholder="Si besoin, nom explicite ( ex: Stade Coubertin, Maison diocésaine..)"
-        name="lieu_evenement_info"
+        name="lieu_depart_info"
     />
 
     <h4>
@@ -57,11 +56,11 @@
     </h4>
     <input
         placeholder="Commune/CP ou adresse précise pour géolocalisation - saisir puis sélectionner dans la liste déroulante"
-        name="lieu_depart_retour"
+        name="lieu_destination"
     />
     <input
         placeholder="Si besoin, nom explicite ( ex: Local scout, parking Eglise Saint-Martin..)"
-        name="lieu_depart_retour_info"
+        name="lieu_destination_info"
     />
 
     <h4>Gestion des trajets</h4>
@@ -73,13 +72,13 @@
 
     <textarea name="description" cols="30" rows="10" />
 
-    <label for="photo">Ajouter Photo</label>
-    <input type="file" name="avatar" accept="image/png, image/jpeg" />
+    <!-- <label for="photo">Ajouter Photo</label>
+    <input type="file" name="avatar" accept="image/png, image/jpeg" /> -->
 
     <h4>Organisateur</h4>
 
-    <Input placeholder="Votre Nom, Prénom" />
-    <Input type="email" placeholder="Votre E-mail" />
+    <input placeholder="Votre Nom, Prénom" name="nom_organisateur" />
+    <input type="email" placeholder="Votre E-mail" name="email_organisateur" />
 
     <h4>Personnes présentes</h4>
     <input
